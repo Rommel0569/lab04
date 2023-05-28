@@ -70,7 +70,15 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    return Picture(None)
+
+    nueva = []
+    for  r in p.img:
+      nueva.append(r)
+
+    for r in self.img:
+      nueva.append(r)
+
+    return Picture(nueva)
   
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
@@ -105,3 +113,21 @@ class Picture:
     """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
     o antihorario"""
     return Picture(None)
+
+  
+  def setFondo(self, p):
+    fColor = p.img[0][0]
+    print("El color es: " + fColor)
+    nueva = []
+    for r  in self.img:
+      x = 0
+      row = ""
+      while x < len(r):
+        if r[x] == " ":
+        fila += fColor
+        else:
+          fila += r[x]
+        x += 1
+      nueva.append(fila)
+
+    return Picture(nueva)
