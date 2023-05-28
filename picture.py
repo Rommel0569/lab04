@@ -30,7 +30,7 @@ class Picture:
         row += r[length -1 -x]
         x += 1
       nuevo.append(row)
-      
+
     return Picture(nuevo)
 
   def negative(self):
@@ -75,7 +75,17 @@ class Picture:
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
         la cantidad de veces que indique el valor de n """
-    return Picture(None)
+        nuevo = []
+
+        for r in self.img:
+          x = 1
+          fila = ""
+          while x <=n:
+            fila += r
+            x += 1
+          nuevo.append(fila)
+
+         return Picture(nuevo)
 
   def verticalRepeat(self, n):
     return Picture(None)
