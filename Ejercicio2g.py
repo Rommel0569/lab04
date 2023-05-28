@@ -39,4 +39,4 @@ row7 = row2.negative()
 
 row8 = row1.negative()
 """Por ultimo se dibuja en orden utilizando la funcion up para que uno este por encima del otro y asi sucesivamente"""
-draw(row1.up(row2).up(row3__6).up(row7).up(row8))
+draw(row1.up(row2).up(fila3__6).up(row7).up(row8))
